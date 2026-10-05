@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finding Home | An Interactive Journey</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <header class="hero scene" id="start">
+    <div class="layer sky" data-speed="0.10"></div>
+    <div class="layer glow" data-speed="0.18"></div>
+    <div class="layer skyline skyline-back" data-speed="0.25"></div>
+    <div class="layer skyline skyline-front" data-speed="0.38"></div>
+    <div class="hero-content reveal">
+      <p class="eyebrow">A REAL ESTATE JOURNEY</p>
+      <h1>Finding<br><em>Home.</em></h1>
+      <p class="intro">A home search is more than listings and square footage. It is the journey from imagining a life to finding the place where it can happen.</p>
+      <a href="#dream" class="scroll-link">Scroll to begin <span>↓</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="chapter light" id="dream">
+      <div class="chapter-number parallax-text" data-speed="-0.05">01</div>
+      <div class="content reveal">
+        <p class="eyebrow">THE DREAM</p>
+        <h2>It starts with a feeling.</h2>
+        <p>You picture the morning light, a kitchen full of conversation, and a neighbourhood that feels like yours. Before there is an address, there is an idea of home.</p>
+      </div>
+      <div class="dream-card reveal" aria-label="Home wish list">
+        <button type="button" data-priority="light" aria-pressed="false">Natural light</button><button type="button" data-priority="space" aria-pressed="false">Room to grow</button><button type="button" data-priority="quiet" aria-pressed="false">A quiet street</button><button type="button" data-priority="gather" aria-pressed="false">Space to gather</button><p class="wish-feedback" id="wishFeedback" aria-live="polite">Choose what matters most. Your matching homes will update below.</p>
+      </div>
+    </section>
+
+    <section class="chapter dark search-section" id="search">
+      <div class="moving-grid" data-speed="0.08"></div>
+      <div class="content reveal">
+        <p class="eyebrow">THE SEARCH</p>
+        <h2>Then the possibilities begin.</h2>
+        <p>Listings become tabs. Neighbourhoods become weekend drives. Every doorway asks the same question: <em>could this be it?</em></p>
+      </div>
+      <p id="matchCount" class="interactive-note" aria-live="polite">3 homes to explore · illustrated examples</p><div class="listing-stack" aria-label="Animated property listing cards">
+        <article class="listing reveal" data-match="light gather"><div class="house house-one"><span></span></div><div><small>OPTION 01</small><h3>The City Townhome</h3><button type="button" class="choose-home" data-home="The City Townhome">Choose this home</button><p>Connected • Modern • Bright</p></div></article>
+        <article class="listing reveal" data-match="space quiet"><div class="house house-two"><span></span></div><div><small>OPTION 02</small><h3>The Family Home</h3><button type="button" class="choose-home" data-home="The Family Home">Choose this home</button><p>Spacious • Quiet • Green</p></div></article>
+        <article class="listing reveal" data-match="light space quiet gather"><div class="house house-three"><span></span></div><div><small>OPTION 03</small><h3>The One That Feels Right</h3><button type="button" class="choose-home" data-home="The One That Feels Right">Choose this home</button><p>Warm • Open • Yours</p></div></article>
+      </div>
+    </section>
+
+    <section class="chapter warm" id="visit">
+      <div class="chapter-number parallax-text" data-speed="-0.06">03</div>
+      <div class="content reveal">
+        <p class="eyebrow">THE SHOWING</p>
+        <h2>Photos become rooms.</h2>
+        <p>You step inside. You notice the details a listing cannot capture—the way the floor feels beneath your feet, the view from the window, the silence between rooms.</p>
+      </div>
+      <div class="tour-panel reveal"><p id="tourHome">Explore a possible home</p><div class="window-scene" aria-label="Stylized window looking onto a home landscape">
+        <div class="sun"></div><div class="hill hill-a"></div><div class="hill hill-b"></div>
+        <div class="window-frame vertical"></div><div class="window-frame horizontal"></div>
+      </div><h3 id="roomTitle" aria-live="polite">Living room</h3><p id="roomDescription">Morning light, a comfortable gathering space, and a view of the garden.</p><div class="tour-controls" role="group" aria-label="Room tour" tabindex="0"><button type="button" id="previousRoom" aria-label="Previous room">← Previous</button><span id="roomCount">1 / 3</span><button type="button" id="nextRoom">Next →</button></div><p class="hint">Use the buttons, or focus here and press ← / → to tour each room.</p></div>
+    </section>
+
+    <section class="chapter offer" id="offer">
+      <div class="offer-bg layer" data-speed="0.10"></div>
+      <div class="content centered reveal">
+        <p class="eyebrow">THE OFFER</p>
+        <h2>Now it gets real.</h2>
+        <p>Numbers, conditions, signatures and a little patience. The dream turns into a decision—and the decision becomes a commitment.</p>
+        <p id="offerHome">Choose a home in The Search to begin.</p><button type="button" id="submitOffer" disabled>Send a practice offer</button><div class="status" id="offerStatus" role="status">NO OFFER YET</div><p class="hint">A fictional demonstration. No real offer is sent.</p>
+      </div>
+    </section>
+
+    <section class="chapter keys" id="keys">
+      <div class="content reveal">
+        <p class="eyebrow">THE MOMENT</p>
+        <h2>And then, the call.</h2>
+        <p class="big-quote" id="acceptedMessage" aria-live="polite">Your next chapter<br>is waiting.</p>
+      </div>
+      <div class="key-visual reveal" aria-hidden="true"><div class="ring"></div><div class="key-shaft"></div><div class="key-teeth"></div></div>
+    </section>
+
+    <section class="chapter home" id="home">
+      <div class="stars layer" data-speed="0.04"></div>
+      <div class="final-house reveal" aria-hidden="true"><div class="roof"></div><div class="body"><div class="door"></div><div class="lit-window w1"></div><div class="lit-window w2"></div></div></div>
+      <div class="content centered reveal">
+        <p class="eyebrow">WELCOME HOME</p>
+        <h2>The search ends.<br><em>Your story begins.</em></h2>
+        <p>A house is an address. A home is everything that happens after you get the keys.</p>
+        <a href="#start" class="restart">Experience it again ↑</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
